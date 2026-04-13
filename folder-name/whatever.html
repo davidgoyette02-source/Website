@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Homepage Layout - Updated Structure</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #1a1a1a;
+      color: white;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      font-size: 20px;
+      margin: 30px 0 15px;
+    }
+
+    /* FEATURED GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .tag {
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #777;
+    }
+
+    .list {
+      padding: 15px;
+    }
+
+    .list-item {
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .list-item:last-child {
+      border-bottom: none;
+    }
+
+    /* EVENTS SECTION */
+    .events {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .event-card {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .date {
+      font-size: 13px;
+      color: #666;
+    }
+
+    /* BUTTON */
+    .button {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 13px;
+      color: #1a73e8;
+      text-decoration: none;
+    }
+
+    @media (max-width: 800px) {
+      .grid, .events {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Thomas Aquinas College</h1>
+  <p>News, Media & Events</p>
+</header>
+
+<div class="container">
+
+  <!-- ===================== -->
+  <!-- FEATURED CONTENT HUB -->
+  <!-- ===================== -->
+  <div class="section-title">Featured & Latest</div>
+
+  <div class="grid">
+
+    <!-- Main featured -->
+    <div class="card">
+      <img src="https://via.placeholder.com/800x400" alt="">
+      <div class="card-content">
+        <div class="tag">News</div>
+        <h3>New Lecture Series on Classical Philosophy</h3>
+        <p>A public lecture series exploring Aristotelian thought in modern education.</p>
+        <a class="button" href="#">Read More →</a>
+      </div>
+    </div>
+
+    <!-- Mixed feed -->
+    <div class="card list">
+      <div class="tag">Latest</div>
+
+      <div class="list-item">
+        <strong>Podcast: Faith & Reason</strong><br/>
+        <span class="date">Media</span>
+      </div>
+
+      <div class="list-item">
+        <strong>New Video Lecture Released</strong><br/>
+        <span class="date">Lecture</span>
+      </div>
+
+      <div class="list-item">
+        <strong>Campus News Update</strong><br/>
+        <span class="date">News</span>
+      </div>
+
+      <div class="list-item">
+        <strong>Faculty Talk Published</strong><br/>
+        <span class="date">Media</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===================== -->
+  <!-- EVENTS (SEPARATE) -->
+  <!-- ===================== -->
+
+  <div class="section-title">Upcoming Events</div>
+
+  <div class="events">
+
+    <div class="event-card">
+      <div class="date">April 20, 2026</div>
+      <h3>Spring Convocation Lecture</h3>
+      <p>Main campus lecture featuring guest faculty discussion.</p>
+      <a class="button" href="#">View Details →</a>
+    </div>
+
+    <div class="event-card">
+      <div class="date">April 25, 2026</div>
+      <h3>Open House</h3>
+      <p>Prospective student introduction to campus life.</p>
+      <a class="button" href="#">View Details →</a>
+    </div>
+
+    <div class="event-card">
+      <div class="date">May 2, 2026</div>
+      <h3>Philosophy Lecture Night</h3>
+      <p>Evening lecture open to students and guests.</p>
+      <a class="button" href="#">View Details →</a>
+    </div>
+
+    <div class="event-card">
+      <div class="date">May 10, 2026</div>
+      <h3>Graduation Mass</h3>
+      <p>Annual commencement celebration.</p>
+      <a class="button" href="#">View Details →</a>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
